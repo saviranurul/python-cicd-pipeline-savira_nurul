@@ -12,9 +12,12 @@ node {
             junit 'test-reports/results.xml'
         }
     }
-    stage('Deliver') {
+    stage('Manual Approval') {
         checkout scm
-        input message: 'Want to continue on the delivery process?'
+        input message: 'Lanjutkan ke tahap Deploy? (Pilih "Proceed" untuk melanjutkan eksekusi pipeline, atau Pilih "Abort" untuk menghentikan eksekusi pipeline.)'
+    }
+    stage('Deploy') {
+        checkout scm
         sh "docker run --rm -v /var/jenkins_home/workspace/python-cicd-pipeline-savira_nurul/sources:/src cdrx/pyinstaller-linux:python2 'pyinstaller -F add2vals.py'"
         archiveArtifacts artifacts: 'sources/add2vals.py', followSymlinks: false
         sh "docker run --rm -v /var/jenkins_home/workspace/python-cicd-pipeline-savira_nurul/sources:/src cdrx/pyinstaller-linux:python2 'rm -rf build dist'"

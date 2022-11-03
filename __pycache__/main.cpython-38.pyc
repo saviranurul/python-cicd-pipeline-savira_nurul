@@ -1,0 +1,18 @@
+U
+�cc��@stddlmZddlmZddlmZddlmZe�Gdd�de�Z �
+d�d    ��Z
+            �
+             d
+�e     d
+         �d
+dS)�)�calc)�Union)�FastAPI)�      BaseModelc@seZdZUeed<eed<dS)�
+                                                                                 NumberInput�num1�num2N)__name__�
+__module__�
+           __qualname__�float�__annotations__�rr�8/home/ubuntu/python-cicd-pipeline-savira_nurul/./main.pyrs
+r�/cCddiS)N�messagez#Welcome to Savira Python Simple Apprrrrr�  read_root
+                                                                                 srz/calc)�datacCs&tt�t|j�t|j���}||d�S)N)Z
+                         number_input�total)�strrZadd2r)rrrrr�  read_itemsrN)�sourcesr�typingrZfastapirpydanticr�appr�getrZpostrrrrr<module>s
+                                                
+                                                 
+                                                  
+                                                   

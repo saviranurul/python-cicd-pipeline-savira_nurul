@@ -1,0 +1,19 @@
+U
+        cc��@sdZdd�Zdd�ZdS)aP
+The 'calc' library contains the 'add2' function that takes 2 values and adds
+them together. If either value is a string (or both of them are) 'add2' ensures
+they are both strings, thereby resulting in a concatenated result.
+NOTE: If a value submitted to the 'add2' function is a float, it must be done so
+in quotes (i.e. as a string).
+c
+   CsTz
+t|�WStk
+rNzt|�WYStk
+rHt|�YYSXYnXdS�N)�int�
+ValueError�float�str)�value�r�>/home/ubuntu/python-cicd-pipeline-savira_nurul/sources/calc.py�conv
+s
+r cCs<t|�}t|�}t|t�s$t|t�r4t|�}t|�}||Sr)r     �
+isinstancer)Zarg1Zarg2arg1convarg2convrr�add2s
+                                                    r
+                                                        N)�__doc__r    r
+                                                                         rrr<module>s
